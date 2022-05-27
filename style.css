@@ -30,6 +30,7 @@ html {
   background-color: var(--secondary-color);
   margin: 3rem;
   box-shadow: 0 1rem 3rem var(--grey-color);
+  overflow: hidden;
 }
 
 .header {
@@ -38,11 +39,12 @@ html {
   background: linear-gradient(rgba(18,113,255,.5), rgba(18,113, 255, 0.3)), url(./images/header-bg.jpg) center no-repeat;
   background-size: cover;
   position: relative;
+  perspective: 80rem;
 }
 
 .header-image {
-  width: 44%;
-  height: 97vh;
+  width: 35%;
+  animation: image-float 10s infinite;
 }
 
 .header-text {
@@ -85,4 +87,79 @@ html {
   height: 3rem;
   margin: .5rem;
   border-radius: 50%;
+}
+
+.logo h1 span:nth-child(1) {
+  /* animation-name: drop-letters;
+  animation-duration: 5s;
+  animation-delay: .2s;
+  animation-iteration-count: infinite; */
+  animation: drop-letters 5s .1s infinite;
+}
+.logo h1 span:nth-child(2) {
+  animation: drop-letters 5s .2s infinite;
+}
+.logo h1 span:nth-child(3) {
+  animation: drop-letters 5s .3s infinite;
+}
+.logo h1 span:nth-child(4) {
+  animation: drop-letters 5s .4s infinite;
+}
+.logo h1 span:nth-child(5) {
+  animation: drop-letters 5s .5s infinite;
+}
+.logo h1 span:nth-child(6) {
+  animation: drop-letters 5s .6s infinite;
+}
+.logo h1 span:nth-child(7) {
+  animation: drop-letters 5s .7s infinite;
+}
+
+@keyframes drop-letters {
+  0% {
+    transform: translateY(0);
+  }
+
+  10% {
+    transform: translateY(0);
+  }
+
+  15% {
+    transform: translateY(-100%);
+  }
+
+  20% {
+    transform: translateY(0);
+  }
+
+  100%  {
+    transform: translateY(0);
+  }
+}
+
+@keyframes image-float {
+  0% {
+    transform: translateZ(40rem);
+    opacity: 1;
+  }
+
+  40% {
+    transform: translateZ(-500rem) translateX(150rem);
+    opacity: .8;
+  }
+
+  70% {
+    transform: translateZ(-1300rem) translateX(800rem);
+    opacity: .6;
+  }
+
+  80% {
+    transform: translateZ(-50rem) translateX(100rem);
+    opacity: .8;
+  }
+
+  100% {
+    transform: translateZ(40rem);
+    opacity: 1;
+  }
 }
