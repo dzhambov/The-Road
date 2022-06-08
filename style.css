@@ -1,3 +1,4 @@
+/* Common Styles */
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +27,9 @@ html {
   align-items: center;
 }
 
+/* End of Common Styles */
+
+/* Header */
 .container {
   background-color: var(--secondary-color);
   margin: 3rem;
@@ -44,7 +48,7 @@ html {
 
 .header-image {
   width: 35%;
-  animation: image-float 10s infinite;
+  animation: image-float 150s infinite;
 }
 
 .header-text {
@@ -163,3 +167,133 @@ html {
     opacity: 1;
   }
 }
+
+/* End of Header */
+
+/* Popular Tours */
+.popular-tours {
+  padding: 5rem 0 10rem 0;
+}
+
+.popular-tours-heading {
+  font-size: 6rem;
+  text-align: center;
+  margin-bottom: 6rem;
+  color: var(--primary-color);
+  text-shadow: 0 .1rem .2rem var(--primary-color);
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 30rem;
+  position: relative;
+  perspective: 150rem;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: .5rem .5rem 0 0;
+}
+
+.front-side {
+  text-align: center;
+  background-color: var(--white-color);
+  border-radius: .5rem;
+  position: relative;
+  z-index: 3;
+  opacity: .95;
+  transition: opacity .4s, transform .4s, box-shadow .4s;
+}
+
+.change > .front-side{
+  transform: translateZ(-5rem) translateX(2rem);
+  box-shadow: 0 2rem 3rem #777;
+  opacity: 0.4;
+  z-index: 0; 
+}
+
+.tour-name {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  top: 30%;
+  right: 1rem;
+  color: var(--white-color);
+  text-shadow: 0 0 1rem #000;
+}
+
+.card-list {
+  width: 80%;
+  margin: auto;
+  padding: 2rem 0 3rem 0;
+}
+
+.card-list-item {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--light-grey-color);
+  margin: 2rem 0;
+  border-bottom: .1rem solid var(--primary-color);
+  padding-bottom: 1.5rem;
+}
+
+.back-side {
+  position: absolute;
+  top: 0;
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem;
+  box-shadow: 0 3rem 2rem #777;
+  flex-direction: column;
+  transform: translateZ(-5rem) translateX(2rem);
+  opacity: .6;
+  transition: opacity .4s, transform .4s, box-shadow .4s;
+}
+
+.change > .back-side{
+  transform: translateZ(0) translateX(0);
+  box-shadow: 0 .5rem 2rem #aaa;
+  opacity: .8; 
+}
+
+.tour-price {
+  font-size: 5rem;
+  font-weight: 500;
+  color: var(--white-color);
+  margin-bottom: 2rem;
+}
+
+.card-button {
+  color: var(--primary-color);
+  background-color: var(--white-color);
+  border: none;
+  font-size: 2.5rem;
+  padding: 1rem 2rem;
+  letter-spacing: .2rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.nav-btn  {
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  padding: .5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--light-grey-color);
+  border-radius: .3rem;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  cursor: pointer;
+}
+
+/* End of Popular Tours */
