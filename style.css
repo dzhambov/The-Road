@@ -376,6 +376,7 @@ html {
   text-align: center;
   background: url("./images/contact-us-bg.png") center no-repeat;
   background-size: cover;
+  animation: contact-bg 30s infinite;
 }
 
 .contact-heading {
@@ -440,8 +441,49 @@ html {
   letter-spacing: .1rem;
   color: var(--grey-color);
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+}
+
+.form-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.4rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  background-color: var(--light-grey-color);
+  color: var(--white-color);
+  border-radius: .5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color .4s;
+}
+
+.form-btn:hover {
+  background-color: var(--grey-color);
+}
+
+.input-group textarea {
+  max-width: 100%;
+  max-height: 15rem;
+}
+
+@keyframes contact-bg {
+  0% {
+    background-color: #3d3d3d;
+  }
+  25% {
+    background-color: #ced8e4;
+  }
+  50% {
+    background-color: #1e81f3;
+  }
+  75% {
+    background-color: #ff7842;
+  }
+
+  100% {
+    background-color: #3d3d3d;
+  }
 }
 
 /*End of Contact */
