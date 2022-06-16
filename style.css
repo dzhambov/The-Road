@@ -639,3 +639,68 @@ html {
   margin: 5rem;
 }
 /* End of Footer */
+
+@media (max-width: 1100px) {
+  .cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    margin: 2rem 0;
+  }
+
+  .story-bg {
+    width: 80%;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-link {
+    flex-grow: 1;
+  }
+
+  .header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  .heading {
+    font-size: 5rem;
+  }
+
+  .header-paragraph {
+    font-size: 2rem;
+  }
+
+  .story-bg {
+    width: 70%;
+    transform: skewX(0);
+  }
+
+  .story {
+    transform: skewX(0);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .story-img {
+    margin-bottom: 2rem;
+  }
+
+  .popular-tours-heading {
+    font-size: 5rem;
+  }
+
+  .footer-link {
+    padding: .3rem 2rem;
+    margin: 0 1rem;
+  }
+}
